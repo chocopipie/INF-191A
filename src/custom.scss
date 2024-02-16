@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+body {
+    --bs-body-font-family: 'Roboto', sans-serif;
+}
+.paciolan-background-color {
+    background-color: #2A69B7 !important; /* Use !important to ensure this style takes precedence */
+}
+
+Navbar.Brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large; /* Adjust the font size as needed */
+}
+
+@import '~bootstrap/scss/bootstrap';
