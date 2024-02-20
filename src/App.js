@@ -1,4 +1,4 @@
-import Navbar from './PageNavbar';
+import Navbar from './Layouts/PageNavbar';
 
 function App() {
   return (
