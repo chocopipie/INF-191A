@@ -9,6 +9,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Container>
+      <Row className="mt-5">
+          <h1>Event Rotation Viewer</h1>
+        </Row>
         <Row className="mt-5">
           <Col className="mx-5"><ComboSearchForm /></Col>
           <Col><h1>detail page here</h1></Col>
