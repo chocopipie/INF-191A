@@ -1,0 +1,43 @@
+@import '~bootstrap/scss/bootstrap';
+
+.formTitle {
+    font-size: x-large;
+    font-weight: 500;
+    background-color: #edede9; // Background color for the box
+    color: black; // Text color
+    padding: 10px; // Padding inside the box
+    border-radius: 5px; // Border radius
+    border-width: 5px;
+    margin-bottom: 20px; // Margin to separate from form
+}
+
+.searchForm {
+    margin: auto; // Center the container horizontally
+    padding: 20px 30px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-top-color: #2A69B7;
+    border-top-width: 5px;
+    box-shadow: 3px 5px 5px #adb5bd;
+    display: flex;
+    flex-direction: column; // Align items vertically
+    align-items: center; // Center items horizontally
+}
+
+Form {
+    display: flex;
+    flex-direction: column; // Align items vertically
+    align-items: center; // Center items horizontally
+}
+  
+.searchForm .form-group {
+    margin-bottom: 20px; // Increase spacing between form groups
+}
+
+.searchForm .form-label {
+    font-weight: bold;
+}
+
+Button {
+    background-color: #2A69B7 !important; /* Use !important to ensure this style takes precedence */
+}
