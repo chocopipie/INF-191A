@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/bootstrap';
+
+.data-block {
+    text-align: center;
+    margin: 15px 0px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    border-top-width: 2px;
+    box-shadow: 3px 5px 5px #adb5bd;
+}
+
+.title {
+    font-weight: bold;
+}
