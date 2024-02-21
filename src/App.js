@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import EventDetailsPopup from './Components/EventDetailsPopup';
+import TableComponent from './Components/ComboTable';
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
@@ -27,8 +28,10 @@ function App() {
       </Row>
       <Row className="mt-5">
         <Col className="me-5" xs={6} md={4}><ComboSearchForm /></Col>
-        <Col><h1>Result table here</h1></Col>
-      </Row>
+        <Col>
+            <TableComponent />
+          </Col>
+        </Row>
       <Row className="mt-5" variant="primary" onClick={() => setModalShow(true)}>
         <Col><button>Test Detail Popup</button></Col>
       </Row>
