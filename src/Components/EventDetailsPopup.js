@@ -36,17 +36,26 @@ const EventDetailsPopup = (props) => {
                     </Col>
                     </Row>
         
-                    {/* Edit the code for event start-end date + status here */}
                     <Row>
-                    <Col xs={6} md={4}>
-                        {props.eventStartDate}
-                    </Col>
-                    <Col xs={6} md={4}>
-                        {props.eventEndDate}
-                    </Col>
-                    <Col xs={6} md={4}>
-                        {props.status}
-                    </Col>
+                        <Col xs={6} md={4}>
+                            <div className="data-block">
+                                <div className="title">Event Start Date</div>
+                                {props.eventStartDate}
+                            </div>
+                        </Col>
+                        <Col xs={6} md={4}>
+                            <div className="data-block">
+                                <div className="title">Event End Date</div>
+                                {props.eventEndDate}
+                            </div>
+                            
+                        </Col>
+                        <Col xs={6} md={4}>
+                            <div className="data-block">
+                                <div className="title">Event Status</div>
+                                {props.status}
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </Modal.Body>
