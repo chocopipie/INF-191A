@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import EventDetailsPopup from './EventDetailsPopup';
 
 const TableComponent = () => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
+  const [selectedEventComboID, setSelectedEventComboID] = useState(null); // State to store the selected eventComboID
+  const [modalShow, setModalShow] = useState(false); // State to control the visibility of the modal
 
   const tableData = [
     { eventComboID: 221, EventDate: '2024-01-25T19:00:00-08:00', RotationStatus: 'EXPIRED' },
@@ -17,6 +20,15 @@ const TableComponent = () => {
     }
     setSortConfig({ key, direction });
   };
+
+  const handleEventComboIDClick = (eventComboID) => {
+    const selectedRow = tableData.find((row) => row.eventComboID === eventComboID);
+    if (selectedRow) {
+      setSelectedEventComboID(eventComboID);
+      setModalShow(true);
+    }
+  };
+  
 
   const sortedData = () => {
     const sortableData = [...tableData];
@@ -60,13 +72,29 @@ const TableComponent = () => {
         <tbody>
           {sortedData().map((item, index) => (
             <tr key={index}>
-              <td style={{ border: '1px solid #ddd', padding: '8px', color: '#666' }}>{item.eventComboID}</td>
+              <td style={{ border: '1px solid #ddd', padding: '8px'}}>
+                <button 
+                  onClick={() => handleEventComboIDClick(item.eventComboID)}
+                >
+                  {item.eventComboID}
+                </button>
+              </td>
               <td style={{ border: '1px solid #ddd', padding: '8px', color: '#666' }}>{item.EventDate}</td>
               <td style={{ border: '1px solid #ddd', padding: '8px', color: '#666' }}>{item.RotationStatus}</td>
             </tr>
           ))}
         </tbody>
       </table>
+        <EventDetailsPopup 
+          show={modalShow} 
+          onHide={() => setModalShow(false)}
+          dataAccountID="sample"
+          season="sample"
+          combo="sample"
+          eventStartDate="sample"
+          eventEndDate="sample"
+          status={selectedEventComboID ? tableData.find((row) => row.eventComboID === selectedEventComboID)?.RotationStatus : ""}
+        />
     </div>
   );
 };
