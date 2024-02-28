@@ -88,7 +88,7 @@ const TableComponent = () => {
         <EventDetailsPopup 
           show={modalShow} 
           onHide={() => setModalShow(false)}
-          dataAccountID="sample"
+          dataAccountID={selectedEventComboID}
           season="sample"
           combo="sample"
           eventStartDate="sample"
